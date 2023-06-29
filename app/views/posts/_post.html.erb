@@ -14,10 +14,9 @@
     <%= post.keywords %>
   </p>
 
- <p>
-
-    <%= post.user.email%>
-  </p>
+<p>
+  <%= post.user.email if post.user %>
+</p>
   <p>
   <%= link_to "", post, class: "post-link" %>
   </p>
