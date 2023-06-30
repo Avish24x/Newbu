@@ -13,14 +13,14 @@ class PostsController < ApplicationController
 
   end
   # GET /posts/1 or /posts/1.json
+
   def show
     @comment = @post.comments.build
   end
 
 
-  def mypost
-    @posts = Post.all
-
+  def myposts
+    @posts = current_user.posts
   end
 
   # GET /posts/new
